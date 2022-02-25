@@ -19,7 +19,7 @@ public class Game {
         // create random number generator for computer choice
         Random random = new Random();
 
-        // asking user for input, using a boolean variable to control the condition of the gam. T =>continue, F=>quit
+        // asking user for input, using a boolean variable to control the condition of the game. T =>continue, F=>quit
         System.out.println("Would you like to play a round of game? Enter y for playing, Enter n for quit.");
 
         Boolean gameCondition = helpChoice(input);
