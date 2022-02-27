@@ -67,7 +67,7 @@ public class Game {
                     + "2. Klyket beats Tjusig, Hovolm \n"
                     + "3. Tjusig beats Pershult, Skadis \n"
                     + "4. Skadis Beats Hovolm, Klyket \n"
-                    + "5. Hovolm beats Pershult, Tjusig \n
+                    + "5. Hovolm beats Pershult, Tjusig \n"
                     + "6. computer wins in a event of a tie\n");
     }
 
