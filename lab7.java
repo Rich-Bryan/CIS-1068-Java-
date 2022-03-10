@@ -107,43 +107,43 @@ public class jaws {
 
         return a;
     }
-//    public static String toSouthie(String s) {
-//        StringBuilder b = new StringBuilder();
+    public static String spacing(String str) throws FileNotFoundException{
+        String temp = "";
+        String result = "";
 
-//        String[] words = s.split(" ");
-//        for (String w : words) {
-//            if (!w.equals("")) {
-//                b.append(translate(w));
-//                b.append(" ");
-//            } else
-//                b.append(" ");
-//
-//        }
-//        return b.toString();
-//    }
+        //split the string from space
+        String[] words = str.split(" ");
+        // loop through each word
+        for(String word: words){
+            // check if the word is not empty
+            if (!word.equals("")) {
+                // translate the word and store it to temp
+                temp = translate(word);
+                // add the temp to result
+                result += temp + " ";
+            }
+            else{
+                //other-wise add a space
+                result += " ";
+            }
+        }
+       System.out.println(result);
+       return result;
 
 
-
-    //reading a file and creating a file
+ //reading a file and creating a file
     public static void convertToSouthie() throws FileNotFoundException {
         //create a file and read the file
         File file = new File("jaws.txt");
         Scanner scan = new Scanner(file);
         //System.out.println(scan.hasNext());
 
-
         //create a new file to write it
         PrintStream writer = new PrintStream("output.txt");
 
         // print the file translated into a new output file
         while (scan.hasNextLine()){
-            if(scan.nextLine().isEmpty()){
-                System.out.println();
-            }else {
-                String word = scan.nextLine().toLowerCase();
-                System.out.println("haha");
-                writer.println(translate(word));
-            }
+            writer.println(spacing(scan.nextLine()));
         }
     }
 }
